@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Hospital Management System</h1>
+</header>
+
+<nav>
+    <a href="#login">Login</a>
+    <a href="#patients">Patients</a>
+    <a href="#doctors">Doctors</a>
+    <a href="#appointments">Appointments</a>
+    <a href="#billing">Billing</a>
+    <a href="#admin">Admin</a>
+</nav>
+
+<section id="login" class="card">
+    <h2>Login Page</h2>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+</section>
+
+<section id="patients" class="card">
+    <h2>Patient Registration</h2>
+
+    <input type="text" id="patientName" placeholder="Patient Name">
+    <input type="number" id="patientAge" placeholder="Age">
+    <input type="text" id="patientDisease" placeholder="Disease">
+
+    <button onclick="registerPatient()">Register Patient</button>
+
+    <ul id="patientList"></ul>
+</section>
+
+<section id="doctors" class="card">
+    <h2>Doctor Details</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Specialization</th>
+            <th>Experience</th>
+        </tr>
+
+        <tr>
+            <td>Dr. Ravi</td>
+            <td>Cardiologist</td>
+            <td>10 Years</td>
+        </tr>
+
+        <tr>
+            <td>Dr. Priya</td>
+            <td>Neurologist</td>
+            <td>8 Years</td>
+        </tr>
+
+        <tr>
+            <td>Dr. Kumar</td>
+            <td>Orthopedic</td>
+            <td>12 Years</td>
+        </tr>
+    </table>
+</section>
+
+<section id="appointments" class="card">
+    <h2>Appointment Booking</h2>
+
+    <input type="text" id="appointmentPatient" placeholder="Patient Name">
+
+    <select id="doctorSelect">
+        <option>Dr. Ravi</option>
+        <option>Dr. Priya</option>
+        <option>Dr. Kumar</option>
+    </select>
+
+    <input type="date" id="appointmentDate">
+
+    <button onclick="bookAppointment()">Book Appointment</button>
+
+    <ul id="appointmentList"></ul>
+</section>
+
+<section id="billing" class="card">
+    <h2>Billing System</h2>
+
+    <input type="text" id="billPatient" placeholder="Patient Name">
+    <input type="number" id="billAmount" placeholder="Amount">
+
+    <button onclick="generateBill()">Generate Bill</button>
+
+    <ul id="billList"></ul>
+</section>
+
+<section id="admin" class="card">
+    <h2>Admin Dashboard</h2>
+
+    <div class="dashboard">
+
+        <div class="box">
+            <h3>Total Patients</h3>
+            <p id="totalPatients">0</p>
+        </div>
+
+        <div class="box">
+            <h3>Total Appointments</h3>
+            <p id="totalAppointments">0</p>
+        </div>
+
+        <div class="box">
+            <h3>Total Bills</h3>
+            <p id="totalBills">0</p>
+        </div>
+
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
